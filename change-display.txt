@@ -1,0 +1,65 @@
+http://www.ubuntugeek.com/how-change-display-resolution-settings-using-xrandr.html
+
+Xrandr is used to set the size, orientation and/or reflection of the outputs for a screen. It can also set the screen size. There are a few global options; the rest modify a particular output and follow the specification of that output on the command line.
+Open the terminal and run the following commands
+
+First you need to enter the following command
+
+    $ xrandr
+
+This will display the allowed resolutions
+
+Sample output
+
+    Screen 0: minimum 320 x 200, current 1024 x 768, maximum 4096 x 4096
+    VGA1 connected 800×600+0+0 (normal left inverted right x axis y axis) 267mm x 200mm
+    800×600 85.1* +
+    640×480 75.0 60.0
+    720×400 70.1
+
+If you want to add a mode with resolution 1024X768, you can enter the following command: (The output is shown following.)
+
+    $ cvt 1024 768
+
+Sample output
+
+    # 1024×768 59.92 Hz (CVT 0.79M3) hsync: 47.82 kHz; pclk: 63.50 MHz
+    Modeline "1024x768_60.00" 63.50 1024 1072 1176 1328 768 771 775 798 -hsync +vsync
+
+Now you need to create a modeline
+
+    $ xrandr --newmode <Modeline>
+
+copy the modeline of the previous output to the place mode line
+
+    $ xrandr --newmode "1024x768_60.00"   63.50  1024 1072 1176 1328  768 771 775 798 -hsync +vsync
+
+Now you need to add the above mode using the following command
+
+    $ xrandr --addmode VGA1 1024x768_60.00
+
+here for VGA1 you have to use what ever that was there for $ xrandr output
+
+    $ xrandr --output VGA1 --mode 1024x768_60.00
+
+Running these would change your resolution but this is temporary. 
+These steps were done to make sure that these commands work
+
+To make these changes permanent, you need to edit the default file
+
+    $gksudo gedit /etc/gdm/Init/Default
+
+Look for the following lines
+
+    PATH=/usr/bin:$PATH
+    OLD_IFS=$IFS
+
+Add the the following lines below them
+
+    xrandr --newmode "1024×768" 70.00 1024 1072 1176 1328 768 771 775 798 -hsync +vsync
+
+    xrandr --addmode VGA1 1024x768_60.00
+
+    xrandr --output VGA1 --mode 1024×768
+
+Save and exit the file
