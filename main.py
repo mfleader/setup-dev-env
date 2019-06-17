@@ -28,6 +28,7 @@ def main():
             'vim',
             'xclip',
             'java-latest-openjdk',
+            'deja-dup',        # backup and restore
             'libssl',          # needed for r packages
             'libcurl-devel',   # needed for r packages
             'libxml2-devel',   # needed for r packages
@@ -35,6 +36,8 @@ def main():
             'libXt-devel',     # needed for r packages
         ]
         subprocess.run([*install_cmds, *tools])
+
+        # https://websiteforstudents.com/automatically-backup-files-to-google-drive-with-deja-dup-on-ubuntu-16-04-18-04/
 
     def langs():
         julia_repo = 'nalimilan/julia'
@@ -139,10 +142,12 @@ def main():
          to ensure snap’s paths are updated correctly."""
         subprocess.run([*install_cmds, 'snapd'])
 
-
         """To enable classic snap support, enter the following to
         create a symbolic link between /var/lib/snapd/snap and /snap:"""
         subprocess.run(['ln', '-s', '/var/lib/snapd/snap', '/snap'])
+
+    def adobe_flash():
+        pass
 
     def graph_mining_r():
         url_rt = 'https://www.csc2.ncsu.edu/faculty/nfsamato/practical-graph-mining-with-R/R-code/'
@@ -158,6 +163,20 @@ def main():
           'PerformanceMetrics',
           'ParallelR'
         ]
+
+    def rpmfusion():
+        free = 'https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm'
+        nonfree = 'https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+        subprocess.run([*install_cmds, free, nonfree])
+
+        def media_pkgs():
+            pkgs = [
+                'ffmpeg-libs',
+                'vlc'
+            ]
+            subprocess.run([*install_cmds, *pkgs])
+
+        media_pkgs()
 
 
 
