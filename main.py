@@ -4,6 +4,7 @@ from requests_html import HTMLSession
 import re
 import os
 import subprocess
+import pathlib
 
 
 
@@ -34,6 +35,7 @@ def main():
             'libxml2-devel',   # needed for r packages
             'cairo-devel',     # needed for r packages
             'libXt-devel',     # needed for r packages
+            'zeromq-devel',    # hi prfm msgng lib
         ]
         subprocess.run([*install_cmds, *tools])
 
@@ -178,16 +180,42 @@ def main():
 
         media_pkgs()
 
+    def workspaces():
+        wspaces = [
+            'py',
+            'julia',
+            'r',
+            'java',
+            'c',
+            'nodejs'
+        ]
+        # Just made one directory
+        subprocess.run(['mkdir', '-p', (str(pathlib.Path.home()) + '/{'+','.join(wspaces) +'}') ])
 
+    def pypi_pkgs():
+        pkgs = [
+            'pandas',
+            'numpy',
+            'scipy',
+            'toolz',
+            'cufflinks',     # df-bound plotly plotting
+            'plotnine',      # ggplot2
+            'plydata',       # dplyr
+        ]
 
-    #init()
-    #langs()
-    #nodejs()
-    #java_tools()
-    rstudio()
-    #atom()
+    def jupyter():
+        # https://blog.yannickjaquier.com/python/jupyter-lab-installation-fedora-oracle.html
+        pass
+
+    # init()
+    # langs()
+    # nodejs()
+    # java_tools()
+    # rstudio()
+    # atom()
     # juno()
     # fonts()
+
 
 
 

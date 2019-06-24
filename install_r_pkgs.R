@@ -25,17 +25,22 @@
 #     broom, for turning models into tidy data
 #
 
+# tidyverts
+# 'feast', 'fasterr', 'tsibble', 'fable', 'tsibbledata'
 
 
 install.packages(c(
- # 'tidyverse',
- 'tidymodels'
- # 'shiny',
- # 'devtools',
- # 'curl',
- # 'lattice'
-
+ 'tidyverse',
+ 'tidymodels',
+ 'shiny',
+ 'devtools',
+ 'curl',
+ 'lattice',
+ 'skimr',
+ 'RSQLIte',
+ 'DBI'
 ),
  dependencies = TRUE,
  repos='http://cran.rstudio.com/'
 )
+
