@@ -193,14 +193,39 @@ def main():
         subprocess.run(['mkdir', '-p', (str(pathlib.Path.home()) + '/{'+','.join(wspaces) +'}') ])
 
     def pypi_pkgs():
-        pkgs = [
-            'pandas',
+        other = [
+            'toolz'
+
+        ]
+        db = [
+            'sqlalchemy'
+        ]
+        web = [
+            'flask'
+        ]
+        scicomp = [
             'numpy',
-            'scipy',
-            'toolz',
-            'cufflinks',     # df-bound plotly plotting
-            'plotnine',      # ggplot2
-            'plydata',       # dplyr
+            'scipy'
+        ]
+        analysis = [
+            'jupyterlab',
+            'notebook'
+            'pandas',
+            'pandas-profiling',   # pandas eda
+            'plydata',            # dplyr
+            'dfply',              # dplyr
+        ]
+        mdling = [
+            'statsmodels',
+            'tensorflow',
+            'scikit-learn',
+        ]
+        viz = [
+            'altair',
+            'vega',
+            'vega_datasets',
+            'cufflinks',           # df-bound plotly plotting
+            'plotnine',            # ggplot2
         ]
 
     def jupyter():
