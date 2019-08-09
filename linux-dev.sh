@@ -1,6 +1,7 @@
+
 # install tile-based terminal emulator
 # zsh, autojump
-apt install -y tilix zsh autojump
+apt install -y tilix zsh autojump fonts-firacode
 
 # To use autojump, you need to configure you shell to source
 # /usr/share/autojump/autojump.sh on startup.
@@ -25,6 +26,10 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zs
 # install fonts with glyphs
 git clone git@github.com:ryanoasis/nerd-fonts.git ./.nerd-fonts
 ./.nerd-fonts/install.sh FiraCode
+gsettings set org.gnome.desktop.interface monos
+pace-font-name 'FiraCode Nerd Font Mono Regular
+'
+
 
 # enable oh-my-zsh plugins
 # plugins=(git sudo debian extract zsh-autosuggestions docker docker-compose autojump zsh-syntax-highlighting npm node nvm python pip pyenv virtualenv fabric postgres mix heroku colorize mvn)
