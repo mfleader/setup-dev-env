@@ -48,10 +48,12 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2
 apt update
 apt install sbt
 
-# hadoop, spark
+# install hadoop
 # https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-18-04
-# 
 
+
+# install spark
+# https://computingforgeeks.com/how-to-install-apache-spark-on-ubuntu-debian/
 # use a sym link to be able to switch between multiple versions of spark
 # ln -s /opt/spark-1.2.0 /opt/spark̀
 
