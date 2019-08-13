@@ -36,6 +36,9 @@ pace-font-name 'FiraCode Nerd Font Mono Regular
 
 apt install -y default-jdk
 echo 'export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")' >> ~/.zshrc
+# change system jvm binary
+# sudo update-alternatives --cofnig java
+
 # Scala team only supports LTS jdk (8, 11), and has not completed support for jdk-11
 apt install -y openjdk-8-jdk scala
 
@@ -46,7 +49,8 @@ apt update
 apt install sbt
 
 # hadoop, spark
-
+# https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-18-04
+# 
 # pyspark
 # pip install pyspark
 
