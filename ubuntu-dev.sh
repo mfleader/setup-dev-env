@@ -51,6 +51,10 @@ apt install sbt
 # hadoop, spark
 # https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-18-04
 # 
+
+# use a sym link to be able to switch between multiple versions of spark
+# ln -s /opt/spark-1.2.0 /opt/spark̀
+
 # pyspark (after install pyenv)
 # pip install pyspark
 echo 'export PYSPARK_DRIVER_PYTHON=jupyter' >> ~/.zshrc
