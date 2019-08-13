@@ -39,6 +39,12 @@ echo 'export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")' >> ~/.
 # Scala team only supports LTS jdk (8, 11), and has not completed support for jdk-11
 apt install -y openjdk-8-jdk scala
 
+# install scala build tool (sbt)
+echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+apt update
+apt install sbt
+
 # hadoop, spark
 
 # pyspark
