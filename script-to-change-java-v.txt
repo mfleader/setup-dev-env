@@ -1,0 +1,24 @@
+https://attacomsian.com/blog/change-default-java-version-ubuntu
+
+If you frequently switch between different Java versions, it is a good idea to write a short script to automate the process. Here is the script I used for switching to OpenJDK 8 on my machine.
+
+java8.sh
+
+sudo update-java-alternatives -s java-1.8.0-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/
+export PATH=$PATH:$JAVA_HOME
+
+Similarly, you can create scripts for other Java versions installed on your machine. The next step is to add these scripts as aliases to .bashrc file.
+
+# Java Alias
+alias java8='source /opt/java/switch/java8.sh'
+alias java11='source /opt/java/switch/java11.sh'
+
+Next, run the following command to load the changes of .bashrc file:
+
+$ source ~/.bashrc
+
+Now if you want to switch to Java 8, just type the following command in your terminal:
+
+$ java8
+

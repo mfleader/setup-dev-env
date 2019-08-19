@@ -3,6 +3,9 @@
 # zsh, autojump
 apt install -y tilix zsh autojump fonts-firacode
 
+# to convert notebooks to pdf
+apt install -y texlive-xetex pandoc
+
 # To use autojump, you need to configure you shell to source
 # /usr/share/autojump/autojump.sh on startup.
 . /usr/share/autojump/autojump.sh >> ~/.zshrc
