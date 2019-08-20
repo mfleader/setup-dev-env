@@ -6,6 +6,14 @@ apt install -y tilix zsh autojump fonts-firacode
 # to convert notebooks to pdf
 apt install -y texlive-xetex pandoc
 
+# virtualization tools
+apt install -y vagrant
+
+# install baker
+curl -L https://github.com/ottomatica/baker-release/releases/download/latest-dev/baker.deb 
+dpkg -i baker.deb
+rm baker.deb
+
 # To use autojump, you need to configure you shell to source
 # /usr/share/autojump/autojump.sh on startup.
 . /usr/share/autojump/autojump.sh >> ~/.zshrc
