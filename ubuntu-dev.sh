@@ -9,10 +9,13 @@ apt install -y texlive-xetex pandoc
 # virtualization tools
 apt install -y vagrant
 
-# install baker
-curl -L https://github.com/ottomatica/baker-release/releases/download/latest-dev/baker.deb 
-dpkg -i baker.deb
-rm baker.deb
+# vim
+apt install -y vim
+echo 'syntax on' >> ~/.vimrc
+echo 'set pastetoggle=<F8>' >> ~/.vimrc
+
+# screen recorder
+apt install -y kazam
 
 # To use autojump, you need to configure you shell to source
 # /usr/share/autojump/autojump.sh on startup.
