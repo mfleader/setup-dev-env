@@ -1,3 +1,5 @@
+# install backup tools
+apt install -y duplicity python-gi
 
 # install tile-based terminal emulator
 # zsh, autojump
