@@ -1,3 +1,7 @@
+# latest stable release of git for ubuntu
+add-apt-repository ppa:git-core/ppa
+apt install -y git
+
 # install backup tools
 apt install -y duplicity python-gi
 
