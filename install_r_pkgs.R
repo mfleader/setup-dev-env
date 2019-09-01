@@ -38,7 +38,8 @@ install.packages(c(
  'lattice',
  'skimr',
  'RSQLIte',
- 'DBI'
+ 'DBI',
+ 'tidytext'
 ),
  dependencies = TRUE,
  repos='http://cran.rstudio.com/'
