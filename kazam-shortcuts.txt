@@ -1,0 +1,5 @@
+start recording: Super + Control + r
+pause recording: Super + Control + p
+finish recording: Super + Control + f
+show Kazam: Super + Control + s
+quit Kazam: Super + Control + q 
