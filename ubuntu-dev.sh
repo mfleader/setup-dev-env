@@ -83,4 +83,4 @@ echo 'export PYSPARK_DRIVER_PYTHON=jupyter' >> ~/.zshrc
 echo 'export PYSPARK_DRIVER_PYTHON_OPTS="notebook"' >> ~/.zshrc
 
 # install rstudio deps
-apt install -y libclang-8-dev libclang-common-8-dev libclang-dev libclang1-8 libobjc-8-dev libobjc4
+apt install -y libclang-8-dev libclang-common-8-dev libclang-dev libclang1-8 libobjc-8-dev libobjc4 libcurl4-openssl-devl libxml2-dev libcairo2-dev
