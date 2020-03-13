@@ -2,7 +2,7 @@ import subprocess as sbp
 
 
 pkgs = [
-    # 'r-base-dev',
+    'r-base-dev',
 ]
 
 
@@ -14,7 +14,7 @@ def r_edge():
     # add repo for this ubuntu version's R edge
     sbp.run(['add-apt-repository', 'deb', 'https://cloud.r-project.org/bin/ubuntu', ubuntu_v])
     # install R development package
-    sbp.run(['apt', 'install', '-y', 'r-base-dev'])
+    #    sbp.run(['apt', 'install', '-y', 'r-base-dev'])
 
 
 def install(pkgs):
@@ -23,7 +23,8 @@ def install(pkgs):
 
 
 def main():
-    install(pkgs)
+    r_edge()
+    # install(pkgs)
 
 
 if __name__ == '__main__':
