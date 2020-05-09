@@ -1,6 +1,8 @@
 install git, xclip vim
 apt install -y git xclip vim
 
+add line to numbers to vim
+
 install exfat
 apt install -y exfat-fuse exfat-utils
 https://galaxy.ansible.com/wtanaka/exfat
