@@ -1,0 +1,39 @@
+install git, xclip vim
+apt install -y git xclip vim
+
+add line to numbers to vim
+
+install exfat
+apt install -y exfat-fuse exfat-utils
+https://galaxy.ansible.com/wtanaka/exfat
+
+# create ssh key
+# add ssh-key to ssh-agent
+# add ssh key to github account
+
+install vagrant, virtualbox
+sudo apt install -y vagrant virtualbox
+https://galaxy.ansible.com/crivetimihai/virtualization
+
+install ansible
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+
+
+install nvm
+# install current node lts
+
+install baker
+
+install gnome-tweaks
+apt install -y gnome-tweaks
+
+install chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+install zsh
+apt install -y zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

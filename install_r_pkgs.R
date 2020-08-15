@@ -25,9 +25,17 @@
 #     broom, for turning models into tidy data
 #
 
-# tidyverts
-# 'feast', 'fasterr', 'tsibble', 'fable', 'tsibbledata'
+# tidyverse time series
+# feast, fasterr, tsibble, fable, tsibbledata
 
+# Multivariate distributions
+# MASS, distr
+
+# easily plot probability distributions
+# ggfortify
+
+# best pair plot
+# GGally
 
 install.packages(c(
  'tidyverse',
@@ -39,7 +47,16 @@ install.packages(c(
  'skimr',
  'RSQLIte',
  'DBI',
- 'tidytext'
+ 'tidytext',
+ 'ggfortify',
+ 'distr',
+ 'remotes',
+ 'tsibble',
+ 'feast',
+ 'fable',
+ 'tsibbledata',
+ 'MASS',
+ 'GGally'
 ),
  dependencies = TRUE,
  repos='http://cran.rstudio.com/'
