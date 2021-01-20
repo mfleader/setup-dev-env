@@ -37,28 +37,47 @@
 # best pair plot
 # GGally
 
+# validate r has build tools
+# if done in rstudio and this check fails, this will auto-install build tools 
+pkgbuild::has_build_tools(debug = T)
+
 install.packages(c(
  'tidyverse',
  'tidymodels',
+ 'mlr3',
+ 'rstan'
  'shiny',
  'devtools',
  'curl',
  'lattice',
  'skimr',
  'RSQLIte',
- 'DBI',
  'tidytext',
- 'ggfortify',
  'distr',
  'remotes',
- 'tsibble',
- 'feast',
- 'fable',
- 'tsibbledata',
- 'MASS',
- 'GGally'
+ 'renv',
+ 'GGally',
+ 'ggdag',
+ 'ggfortify',
+ 'ggforce',
+ 'gganimate',
+ 'ggstatsplot',
+ 'patchwork',
+ 'ggthemes',
+ 'hrbrthemes',
+ 'ggsci',
+ 'wesanderson',
+ 'cowplot',
+ 'ggtext',
+ 'ggalt',
+ 'ISLR',
 ),
  dependencies = TRUE,
  repos='http://cran.rstudio.com/'
 )
+
+remotes::install_github('rmcelreath/rethinking')
+
+# time series
+#install.packages(c('tsibble', 'fable', 'feast', 'tsibbledata'), dependencies = T, repos='http://cran.rstudio.com/')
 
